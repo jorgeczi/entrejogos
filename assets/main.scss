@@ -19,7 +19,9 @@
   }
 }
 
-/* Limpar duplicações no rodapé */
-.site-footer .site-title {
+/* Limpar duplicações no rodapé (minima) */
+.site-footer .footer-heading,
+.site-footer .site-title,
+.site-footer h2 {
   display: none;
 }
