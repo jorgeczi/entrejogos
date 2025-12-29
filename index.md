@@ -2,4 +2,4 @@
 layout: home
 ---
 
-Registros ocasionais sobre qualquer assunto, mas principalmente jogos.
+Site bem despretensioso, com registros ocasionais sobre qualquer assunto, mas principalmente jogos.
