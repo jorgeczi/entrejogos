@@ -18,3 +18,8 @@
     background-color: #111;
   }
 }
+
+/* Limpar duplicações no rodapé */
+.site-footer .site-title {
+  display: none;
+}
