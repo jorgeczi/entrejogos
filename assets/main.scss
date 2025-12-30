@@ -101,17 +101,18 @@ pre {
   overflow: auto;
 }
 
-/* Títulos de posts em tom escuro (não azul) */
+/* Títulos bem escuros e discretos */
 .post-title a,
 .post-list-heading a,
 .home h1 a {
-  color: #e7e7e7;        /* quase branco */
+  color: #b5b5b5;      /* cinza escuro elegante */
+  font-weight: 500;
   text-decoration: none;
 }
 
 .post-title a:hover,
 .post-list-heading a:hover,
 .home h1 a:hover {
-  color: #ffffff;        /* hover sutil */
+  color: #d0d0d0;      /* leve clareada no hover */
   text-decoration: underline;
 }
