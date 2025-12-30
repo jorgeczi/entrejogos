@@ -12,26 +12,36 @@ layout: default
 
     <h2>Último post</h2>
 
-    <h1><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h1>
-    <p><small>{{ latest.date | date: "%d/%m/%Y" }}</small></p>
+    <h1 class="post-title p-name">
+      <a class="post-link u-url" href="{{ latest.url | relative_url }}">{{ latest.title }}</a>
+    </h1>
 
-    <div class="post-content">
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ latest.date | date_to_xmlschema }}">
+        {{ latest.date | date: "%d/%m/%Y" }}
+      </time>
+    </p>
+
+    <div class="post-content e-content">
       {{ latest.content }}
     </div>
 
     <hr />
 
     <h2>Posts anteriores</h2>
-    <ul>
+    <ul class="post-list">
       {% for post in site.posts offset:1 limit:10 %}
         <li>
-          <small>{{ post.date | date: "%d/%m/%Y" }}</small>
-          — <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
         </li>
       {% endfor %}
     </ul>
+
   {% else %}
     <p>Ainda não há posts.</p>
   {% endif %}
 
-</div>
+</div></div>
