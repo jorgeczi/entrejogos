@@ -3,25 +3,100 @@
 
 @import "minima";
 
-/* Dark mode automático */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111;
-    color: #e6e6e6;
-  }
-
-  a {
-    color: #8ab4f8;
-  }
-
-  header, footer {
-    background-color: #111;
-  }
+/* ====== Base minimalista ====== */
+:root {
+  color-scheme: dark; /* ajuda o navegador a usar UI escura */
 }
 
-/* Limpar duplicações no rodapé (minima) */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  background: #0f0f10;
+  color: #e7e7e7;
+}
+
+/* largura + respiro (cara de “caderno”) */
+.wrapper {
+  max-width: 760px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* links discretos e elegantes */
+a {
+  color: #9bbcff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* títulos mais “calmos” */
+h1, h2, h3 {
+  letter-spacing: -0.3px;
+}
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.25rem; margin-top: 2rem; }
+
+/* separadores mais sutis */
+hr {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  margin: 1.6rem 0;
+}
+
+/* imagens do post (bonitas no celular) */
+.post-content img,
+.page-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 14px 0;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* ====== Header/rodapé mais minimalistas ====== */
+
+/* deixa o header mais limpo */
+.site-header {
+  border-top: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  background: transparent;
+}
+
+/* remove duplicação “Entre Jogos” no rodapé */
 .site-footer .footer-heading,
 .site-footer .site-title,
 .site-footer h2 {
   display: none;
+}
+
+/* se o “Entre Jogos” extra for o autor (primeira linha da lista) */
+.site-footer .contact-list li:first-child {
+  display: none;
+}
+
+/* deixa o rodapé mais discreto */
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.10);
+  opacity: 0.7;
+}
+
+/* remove “subscribe via RSS” da home */
+.rss-subscribe,
+.feed-subscribe {
+  display: none;
+}
+
+/* melhora blocos de código, caso use */
+pre, code {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+}
+pre {
+  padding: 12px 14px;
+  overflow: auto;
 }
