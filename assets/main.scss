@@ -116,3 +116,11 @@ pre {
   color: #d0d0d0;      /* leve clareada no hover */
   text-decoration: underline;
 }
+
+/* Home: título do último post sem cara de link */
+.post-title .post-link {
+  text-decoration: none;
+}
+.post-title .post-link:hover {
+  text-decoration: underline;
+}
