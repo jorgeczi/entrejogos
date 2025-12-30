@@ -100,3 +100,18 @@ pre {
   padding: 12px 14px;
   overflow: auto;
 }
+
+/* Títulos de posts em tom escuro (não azul) */
+.post-title a,
+.post-list-heading a,
+.home h1 a {
+  color: #e7e7e7;        /* quase branco */
+  text-decoration: none;
+}
+
+.post-title a:hover,
+.post-list-heading a:hover,
+.home h1 a:hover {
+  color: #ffffff;        /* hover sutil */
+  text-decoration: underline;
+}
