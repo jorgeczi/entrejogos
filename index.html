@@ -4,7 +4,10 @@ layout: default
 
 <div class="home">
 
-  <p>Blog bem despretensioso, com posts ocasionais sobre qualquer assunto, mas principalmente jogos.</p>
+  <p>
+    Blog bem despretensioso, com posts ocasionais sobre qualquer assunto,
+    mas principalmente jogos.
+  </p>
 
   {% assign latest = site.posts.first %}
   {% if latest %}
@@ -13,7 +16,9 @@ layout: default
     <h2>Último post</h2>
 
     <h1 class="post-title p-name">
-      <a class="post-link u-url" href="{{ latest.url | relative_url }}">{{ latest.title }}</a>
+      <a class="post-link u-url" href="{{ latest.url | relative_url }}">
+        {{ latest.title }}
+      </a>
     </h1>
 
     <p class="post-meta">
@@ -32,9 +37,13 @@ layout: default
     <ul class="post-list">
       {% for post in site.posts offset:1 limit:10 %}
         <li>
-          <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+          <span class="post-meta">
+            {{ post.date | date: "%d/%m/%Y" }}
+          </span>
           <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
           </h3>
         </li>
       {% endfor %}
@@ -44,4 +53,4 @@ layout: default
     <p>Ainda não há posts.</p>
   {% endif %}
 
-</div></div>
+</div>
