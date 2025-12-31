@@ -166,3 +166,34 @@ pre {
   color: #d0d0d0;       /* hover discreto */
   text-decoration: none;
 }
+
+/* Lista de posts anteriores (minimalista) */
+.post-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.post-item {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 10px 0;
+}
+
+.post-item .post-meta {
+  min-width: 92px;        /* alinha datas */
+  margin: 0;
+  opacity: 0.75;
+}
+
+.post-item .post-link {
+  color: #b5b5b5;         /* um pouco mais claro que títulos */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.post-item .post-link:hover {
+  color: #d0d0d0;
+  text-decoration: underline;
+}
