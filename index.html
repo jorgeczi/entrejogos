@@ -33,21 +33,15 @@ layout: default
 
     <hr />
 
-    <h2>Posts anteriores</h2>
-    <ul class="post-list">
-      {% for post in site.posts offset:1 limit:10 %}
-        <li>
-          <span class="post-meta">
-            {{ post.date | date: "%d/%m/%Y" }}
-          </span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title }}
-            </a>
-          </h3>
-        </li>
-      {% endfor %}
-    </ul>
+<h2>Posts anteriores</h2>
+<ul class="post-list">
+  {% for post in site.posts offset:1 limit:10 %}
+    <li class="post-item">
+      <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
   {% else %}
     <p>Ainda não há posts.</p>
