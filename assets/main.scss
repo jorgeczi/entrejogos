@@ -188,8 +188,9 @@ pre {
 }
 
 .post-item .post-link {
-  color: #b5b5b5;         /* um pouco mais claro que títulos */
-  font-weight: 500;
+  color: #b5b5b5;
+  font-size: 0.95rem;   /* menor que o corpo */
+  font-weight: 400;    /* normal, mais discreto */
   text-decoration: none;
 }
 
