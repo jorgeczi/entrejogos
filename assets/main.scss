@@ -153,3 +153,16 @@ pre {
   padding: 12px 14px;
   overflow: auto;
 }
+
+/* Destaque sutil para o título do site (Entre Jogos) */
+.site-header .site-title,
+.site-header .site-title a {
+  color: #b0b0b0;       /* mais claro que os títulos dos posts */
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.site-header .site-title a:hover {
+  color: #d0d0d0;       /* hover discreto */
+  text-decoration: none;
+}
