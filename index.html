@@ -37,7 +37,8 @@ layout: default
 <ul class="post-list">
   {% for post in site.posts offset:1 limit:10 %}
     <li class="post-item">
-      <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <span class="post-sep">·</span>
       <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
