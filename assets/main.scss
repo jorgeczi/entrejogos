@@ -3,27 +3,34 @@
 
 @import "minima";
 
-/* ====== Base minimalista ====== */
+/* =========================
+   Base visual (dark + minimal)
+   ========================= */
+
 :root {
-  color-scheme: dark; /* ajuda o navegador a usar UI escura */
+  color-scheme: dark;
 }
 
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;
-  letter-spacing: 0.2px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, sans-serif;
   background: #0f0f10;
   color: #e7e7e7;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
 }
 
-/* largura + respiro (cara de “caderno”) */
-.wrapper {
+/* largura de leitura (home + post) */
+.wrapper,
+.post,
+.page {
   max-width: 760px;
+  margin: 0 auto;
   padding-left: 18px;
   padding-right: 18px;
 }
 
-/* links discretos e elegantes */
+/* links discretos */
 a {
   color: #9bbcff;
   text-decoration: none;
@@ -32,65 +39,111 @@ a:hover {
   text-decoration: underline;
 }
 
-/* títulos mais “calmos” */
+/* títulos gerais */
 h1, h2, h3 {
   letter-spacing: -0.3px;
 }
 h1 { font-size: 1.85rem; }
 h2 { font-size: 1.25rem; margin-top: 2rem; }
 
-/* separadores mais sutis */
+/* separadores */
 hr {
   border: 0;
   border-top: 1px solid rgba(255,255,255,0.10);
   margin: 1.6rem 0;
 }
 
-/* imagens do post (bonitas no celular) */
-.post-content img,
-.page-content img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: 14px 0;
-  border: 1px solid rgba(255,255,255,0.10);
-}
+/* =========================
+   Header e rodapé
+   ========================= */
 
-/* ====== Header/rodapé mais minimalistas ====== */
-
-/* deixa o header mais limpo */
 .site-header {
   border-top: 0;
   border-bottom: 1px solid rgba(255,255,255,0.10);
   background: transparent;
 }
 
-/* remove duplicação “Entre Jogos” no rodapé */
-.site-footer .footer-heading,
-.site-footer .site-title,
-.site-footer h2 {
-  display: none;
-}
-
-/* se o “Entre Jogos” extra for o autor (primeira linha da lista) */
-.site-footer .contact-list li:first-child {
-  display: none;
-}
-
-/* deixa o rodapé mais discreto */
+/* rodapé limpo */
 .site-footer {
   border-top: 1px solid rgba(255,255,255,0.10);
   opacity: 0.7;
 }
 
-/* remove “subscribe via RSS” da home */
+/* remove duplicações do rodapé */
+.site-footer .footer-heading,
+.site-footer .site-title,
+.site-footer h2,
+.site-footer .contact-list li:first-child {
+  display: none;
+}
+
+/* remove RSS */
 .rss-subscribe,
 .feed-subscribe {
   display: none;
 }
 
-/* melhora blocos de código, caso use */
+/* =========================
+   Conteúdo (home + post)
+   ========================= */
+
+.post-content,
+.post-content p,
+.post-content li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* imagens */
+.post-content img,
+.page-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 14px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* =========================
+   Títulos (HOME É O PADRÃO)
+   ========================= */
+
+/* título do último post (home) */
+.home .post-title a {
+  color: #9a9a9a;
+  font-weight: 500;
+  text-decoration: none;
+}
+.home .post-title a:hover {
+  color: #d0d0d0;
+  text-decoration: underline;
+}
+
+/* título do post individual */
+.post-header .post-title,
+.post-header .post-title a {
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: #9a9a9a;
+  text-decoration: none;
+}
+.post-header .post-title a:hover {
+  color: #d0d0d0;
+  text-decoration: underline;
+}
+
+/* data */
+.post-meta {
+  color: #9a9a9a;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+/* =========================
+   Código (opcional)
+   ========================= */
+
 pre, code {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.10);
@@ -99,62 +152,4 @@ pre, code {
 pre {
   padding: 12px 14px;
   overflow: auto;
-}
-
-/* =========================
-   Igualar visual do POST ao da HOME
-   ========================= */
-
-/* Título do post igual ao da home */
-.post-header h1,
-.post-title {
-  font-size: 1.85rem;        /* mesmo tamanho da home */
-  font-weight: 500;
-  color: #8a8a8a;            /* mesmo cinza escuro */
-  letter-spacing: -0.3px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Remove destaque excessivo do header do post */
-.post-header {
-  margin-bottom: 1.2rem;
-}
-
-/* Data do post mais discreta */
-.post-meta {
-  color: #9a9a9a;
-  font-size: 0.9rem;
-  margin-bottom: 1.2rem;
-}
-
-/* Conteúdo do post igual ao da home */
-.post-content,
-.post-content p,
-.post-content li {
-  font-size: 1rem;
-  line-height: 1.7;
-
-/* Títulos bem escuros e discretos */
-.post-title a,
-.post-list-heading a,
-.home h1 a {
-  color: #9a9a9a;      /* cinza escuro elegante */
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.post-title a:hover,
-.post-list-heading a:hover,
-.home h1 a:hover {
-  color: #d0d0d0;      /* leve clareada no hover */
-  text-decoration: underline;
-}
-
-/* Home: título do último post sem cara de link */
-.post-title .post-link {
-  text-decoration: none;
-}
-.post-title .post-link:hover {
-  text-decoration: underline;
 }
